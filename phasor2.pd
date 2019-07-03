@@ -1,0 +1,20 @@
+#N canvas 419 634 699 308 10;
+#X obj 153 36 samplerate~;
+#X obj 153 14 loadbang;
+#X obj 153 62 sig~;
+#X obj 157 113 /~;
+#X obj 280 14 inlet~;
+#X obj 29 185 fexpr~ $x1[0] + $y1[-1] * ( ( $x1[0] + $y[-1] ) < 1 )
+* ( 1 - $x2[0] );
+#X text 402 156 send impulse here to reset phase;
+#X obj 33 240 outlet~;
+#X obj 233 72 clip~ 0.001 20000;
+#X obj 417 11 inlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;
+#X connect 4 0 8 0;
+#X connect 5 0 7 0;
+#X connect 8 0 3 0;
+#X connect 9 0 5 1;

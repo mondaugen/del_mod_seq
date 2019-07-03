@@ -1,0 +1,6 @@
+#N canvas 487 371 450 300 10;
+#X obj 51 85 fexpr~ ( $x[-1] > 0 ) && ( $x[0] <= 0 );
+#X obj 44 36 inlet~;
+#X obj 50 123 outlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;

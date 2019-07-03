@@ -1,0 +1,13 @@
+#N canvas 426 468 450 300 10;
+#X obj 102 159 phasor2;
+#X obj 63 54 sig~ 100;
+#X obj 101 186 dac~;
+#X obj 183 90 impulsen;
+#X obj 193 51 sig~ 0.5;
+#X floatatom 207 15 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 0 0 2 1;
+#X connect 1 0 0 0;
+#X connect 3 0 0 1;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;

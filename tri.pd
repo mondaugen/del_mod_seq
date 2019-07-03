@@ -1,0 +1,12 @@
+#N canvas 463 526 589 348 10;
+#X obj 30 40 inlet~;
+#X text 88 22 inlet is phasor from 0 to 1;
+#X obj 25 65 *~ 2;
+#X obj 31 200 outlet~;
+#X text 96 170 output is triangle wave between 0 and 1 with period
+equal to input phasor;
+#X obj 26 115 fexpr~ $x[0] * ( $x[0] < 1 ) + ( 2 - $x[0] ) * ( $x[0]
+>= 1 );
+#X connect 0 0 2 0;
+#X connect 2 0 5 0;
+#X connect 5 0 3 0;

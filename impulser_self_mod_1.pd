@@ -1,0 +1,27 @@
+#N canvas 262 296 450 300 10;
+#X obj 22 117 impulsen;
+#X obj 21 242 dac~;
+#X obj 102 43 impulse1;
+#X obj 115 4 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 142 217 samphold~;
+#X obj 208 167 lfo __________;
+#X obj 140 243 throw~ \$0-fb;
+#X obj 7 76 catch~ \$0-fb;
+#X obj 204 116 sig~ 5;
+#X obj 278 109 sig~ 1;
+#X floatatom 235 46 5 0 0 0 - - -;
+#X obj 352 109 sig~ 10;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 0 0 4 1;
+#X connect 2 0 0 1;
+#X connect 2 0 5 1;
+#X connect 3 0 2 0;
+#X connect 4 0 6 0;
+#X connect 5 0 4 0;
+#X connect 7 0 0 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 2;
+#X connect 10 0 8 0;
+#X connect 11 0 5 3;

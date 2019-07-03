@@ -1,0 +1,4 @@
+#N canvas 611 567 450 300 10;
+#X obj 75 60 impulse1;
+#X obj 194 110 samphold~;
+#X obj 74 186 dline 1000;
